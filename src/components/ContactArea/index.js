@@ -4,7 +4,7 @@ import ContactForm from '../ContactFrom/ContactForm'
 
 const ContactArea = (props) => {
     return (
-        <section className={`wpo-contact-area section-wrap ${props.contactclass}`} id="contact ">
+        <section className={`wpo-contact-area section-wrap ${props.contactclass}`} id="contact">
             <div className="wpo-wpo-contact-form-map">
                 <div className="container">
                     <div className="row">
