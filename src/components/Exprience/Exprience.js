@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import logo1 from '../../images/work/1.png'
 import logo2 from '../../images/work/2.png'
 import logo3 from '../../images/work/3.png'
@@ -7,33 +6,40 @@ import logo4 from '../../images/work/4.png'
 
 const Expriences = [
     {
-        date: '2015 - 2016',
-        logo: logo1,
-        position: 'Junior Visual Designer',
-        companyName: 'Trapeza Group, USA.',
-        workFrom: '',
-    },
-    {
-        date: '2017 - 2018',
-        logo: logo2,
-        position: 'UI/UX Designer',
-        companyName: 'Gallerie Ontario, Canada',
-        workFrom: '(Remote)',
-    },
-    {
-        date: '2019 - 2020',
-        logo: logo3,
-        position: 'Seinor UI/UX Desinger',
-        companyName: 'Morson Hybrid, Canada',
-        workFrom: '',
-    },
-    {
-        date: '2020 - 2023',
+        date: 'Mar 2024 - Present',
         logo: logo4,
-        position: 'Product Designer',
-        companyName: 'Myant Inc. Etobicoke, ON',
-        workFrom: '(Remote)',
+        position: 'JR Front End Developer',
+        companyName: 'Siscotek, Chittagong',
+        workFrom: '(Onsite)',
     },
+    {
+        date: 'Sep 2023 - Feb 2024',
+        logo: logo1,
+        position: 'Front End Developer Intern',
+        companyName: 'Siscotek, Chittagong',
+        workFrom: '(Onsite)',
+    },
+    // {
+    //     date: ' - 2018',
+    //     logo: logo2,
+    //     position: 'UI/UX Designer',
+    //     companyName: 'Gallerie Ontario, Canada',
+    //     workFrom: '(Remote)',
+    // },
+    // {
+    //     date: '2019 - 2020',
+    //     logo: logo3,
+    //     position: 'Seinor UI/UX Desinger',
+    //     companyName: 'Morson Hybrid, Canada',
+    //     workFrom: '',
+    // },
+    // {
+    //     date: '2020 - 2023',
+    //     logo: logo4,
+    //     position: 'Product Designer',
+    //     companyName: 'Myant Inc. Etobicoke, ON',
+    //     workFrom: '(Remote)',
+    // },
 
 ]
 
@@ -55,7 +61,7 @@ const Exprience = (props) => {
                         <ul key={exp} className="flex items-center justify-between sm:flex-wrap col:block mb-8
              bg-[#282828] px-[70px] md:px-[30px] py-[20px] rounded-lg border transition border-transparent hover:border hover:border-[#494949]">
                             <li
-                                className="base-font text-white font-bold text-3xl sm:w-1/2 sm:text-[16px] col:w-full col:text-center col:mb-[10px]">{exprience.date}</li>
+                                className="base-font text-white font-bold text-2xl sm:w-1/2 sm:text-[16px] col:w-full col:text-center col:mb-[10px]">{exprience.date}</li>
                             <li><img src={exprience.logo} alt='logo'
                                 className="sm:w-1/2 col:w-full col:text-center max-w-[100px] col:mx-auto" /></li>
                             <li className="sm:w-1/2 col:w-full col:text-center col:mt-[20px]">
@@ -63,10 +69,10 @@ const Exprience = (props) => {
                                 </h2>
                                 <p className="base-font text-[#DD584F] font-normal text-[15px] sm:text-[14px]">{exprience.companyName},
                                     {exprience.workFrom}.</p>
-                            </li>
-                            <li className="col:text-center col:mt-[10px]"><Link to="/"
+                            </li> 
+                            <li className="col:text-center col:mt-[10px]"><a href='https://siscotek.com/' target='_blank'
                                 className="text-white text-[16px] font-bold transition hover:text-[#FFE600] sm:w-1/2 sm:text-[14px] col:w-full col:text-center">
-                                <i className="ti-arrow-right transition mr-7 text-[16px] col:mr-[5px]"></i>Go to website</Link>
+                                <i className="ti-arrow-right transition mr-7 text-[16px] col:mr-[5px]"></i>Go to website</a>
                             </li>
                         </ul>
                     ))}

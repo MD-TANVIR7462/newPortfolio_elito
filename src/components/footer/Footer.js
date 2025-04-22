@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import Logo from '../../images/logo.png'
-import CtaSection from '../ctaSection/ctaSection'
+// import CtaSection from '../ctaSection/ctaSection'
 
 
 const SubmitHandler = (e) => {
@@ -11,7 +11,7 @@ const SubmitHandler = (e) => {
 const Footer = (props) => {
     return (
         <footer className="relative bg-[#191919] z-10">
-            <CtaSection/>
+            {/* <CtaSection/> */}
             <div className="pt-[170px] pb-[90px] md:py-[90px] md:pb-[20px] overflow-hidden relative -z-10">
                 <div className="wraper">
                     <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3">

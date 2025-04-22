@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import Services from '../../api/service'
-import classnames from 'classnames';
 import ServiceSingle from '../ServiceSingle';
 
 const ServiceSection = (props) => {
@@ -55,50 +54,11 @@ const ServiceSection = (props) => {
                         pleasure born and give you
                         a complete account the system</p>
                 </div>
-                <Nav tabs className='flex col:flex-col-reverse items-center justify-center list-none'>
-                    <NavItem>
-                        <NavLink
-                            className={`${classnames({ active: activeTab === '1' })} nav-link inline-block focus:border-transparent border-tab
-                            w-[250px] md:w-[180px] sm:w-[120px] col:w-[150px] h-[65px] md:h-[55px] sm:h-[45px] bg-[#373737] active:bg-transparent 
-                             text-center mr-7 md:mr-5 sm:mr-[10px] col:mb-[10px]  col:mr-0 rounded-[38px] font-bold text-[22px] md:text-[16px] sm:text-[14px] leading-[65px] 
-                             md:leading-[55px] sm:leading-[35px] p-0 border-2 border-transparent 
-                             text-white active:text-[#FFE600] active:border-[#373737]`}
-                            onClick={() => { toggle('1'); }}
-                        >
-                            Design
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={`${classnames({ active: activeTab === '2' })} nav-link inline-block focus:border-transparent border-tab
-                            w-[250px] md:w-[180px] sm:w-[120px] col:w-[150px] h-[65px] md:h-[55px] sm:h-[45px] bg-[#373737] active:bg-transparent 
-                             text-center mr-7 md:mr-5 sm:mr-[10px] col:mb-[10px] col:mr-0 rounded-[38px] font-bold text-[22px] md:text-[16px] sm:text-[14px] leading-[65px] 
-                             md:leading-[55px] sm:leading-[35px] p-0 border-2 border-transparent 
-                             text-white active:text-[#FFE600] active:border-[#373737]`}
-                            onClick={() => { toggle('2'); }}
-                        >
-                            Development
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={`${classnames({ active: activeTab === '3' })} nav-link inline-block focus:border-transparent border-tab
-                            w-[250px] md:w-[180px] sm:w-[120px] col:w-[150px] h-[65px] md:h-[55px] sm:h-[45px] bg-[#373737] active:bg-transparent 
-                             text-center mr-7 md:mr-5 sm:mr-[10px] col:mb-[10px] col:mr-0 rounded-[38px] font-bold text-[22px] md:text-[16px] sm:text-[14px] leading-[65px] 
-                             md:leading-[55px] sm:leading-[35px] p-0 border-2 border-transparent 
-                             text-white active:text-[#FFE600] active:border-[#373737]`}
-                            onClick={() => { toggle('3'); }}
-                        >
-                            Marketing
-                        </NavLink>
-                    </NavItem>
-                </Nav>
                 <div className="mt-[65px] sm:mt-[45px]">
-
                     <TabContent activeTab={activeTab}>
                         <TabPane tabId="1">
                             <div className="row align-items-center">
-                                {Services.slice(0, 3).map((service, srv) => (
+                                {Services.map((service, srv) => (
                                     <div className="w-[31%] lg:w-[30%] md:w-[46%] sm:w-full mx-[10px] sm:mx-0 inline-block bg-[#232221] border-2 border-[#373737] rounded-[12px] 
                                     text-center px-[40px] lg:px-[20px] py-[50px] md:mb-[30px] group" key={srv}>
                                         <div
@@ -110,49 +70,7 @@ const ServiceSection = (props) => {
                                             className="font-bold font-base-font text-[26px] lg:text-[20px] leading-[31px] text-white mb-[20px] text-center">
                                             {service.sTitle}</h2>
                                         <p className="text-[16px] md:text-[14px] text-[#D8D8D8] my-6 md:my-4">{service.description}</p>
-                                        <button onClick={() => handleClickOpen(service)} className="text-center m-auto flex items-center justify-center
-                                    font-bold  text-white leading-[19px] group hover:text-[#FFE600] transition-all"><i
-                                                className="fi flaticon-right-arrow transition-all mr-7 sm:mr-3"></i> Learn More</button>
-                                    </div>
-                                ))}
-                            </div>
-                        </TabPane>
-                        <TabPane tabId="2">
-                            <div className="row align-items-center">
-                                {Services.slice(3, 6).map((service, srv) => (
-                                    <div className="w-[31%] lg:w-[30%] md:w-[46%] sm:w-full mx-[10px] sm:mx-0 inline-block bg-[#232221] border-2 border-[#373737] rounded-[12px] 
-                                    text-center px-[40px] lg:px-[20px] py-[50px] md:mb-[30px] group" key={srv}>
-                                        <div
-                                            className="max-w-[120px] max-h-[120px] bg-[#373737]
-                                        group-hover:bg-[#59C378] mx-auto leading-[140px] mb-[30px] rounded-[50%] transition-all">
-                                            <i className={`fi ${service.icon}  transition-all text-[50px] text-[#FFE600] group-hover:text-white `}></i>
-                                        </div>
-                                        <h2
-                                            className="font-bold font-base-font text-[26px] lg:text-[20px] leading-[31px] text-white mb-[20px] text-center">
-                                            {service.sTitle}</h2>
-                                        <p className="text-[16px] md:text-[14px] text-[#D8D8D8] my-6 md:my-4">{service.description}</p>
-                                        <button onClick={() => handleClickOpen(service)} className="text-center m-auto flex items-center justify-center
-                                    font-bold  text-white leading-[19px] group hover:text-[#FFE600] transition-all"><i
-                                                className="fi flaticon-right-arrow transition-all mr-7 sm:mr-3"></i> Learn More</button>
-                                    </div>
-                                ))}
-                            </div>
-                        </TabPane>
-                        <TabPane tabId="3">
-                            <div className="row align-items-center">
-                                {Services.slice(6, 9).map((service, srv) => (
-                                    <div className="w-[31%] lg:w-[30%] md:w-[46%] sm:w-full mx-[10px] sm:mx-0 inline-block bg-[#232221] border-2 border-[#373737] rounded-[12px] 
-                                    text-center px-[40px] lg:px-[20px] py-[50px] md:mb-[30px] group" key={srv}>
-                                        <div
-                                            className="max-w-[120px] max-h-[120px] bg-[#373737]
-                                        group-hover:bg-[#59C378] mx-auto leading-[140px] mb-[30px] rounded-[50%] transition-all">
-                                            <i className={`fi ${service.icon}  transition-all text-[50px] text-[#FFE600] group-hover:text-white `}></i>
-                                        </div>
-                                        <h2
-                                            className="font-bold font-base-font text-[26px] lg:text-[20px] leading-[31px] text-white mb-[20px] text-center">
-                                            {service.sTitle}</h2>
-                                        <p className="text-[16px] md:text-[14px] text-[#D8D8D8] my-6 md:my-4">{service.description}</p>
-                                        <button onClick={() => handleClickOpen(service)} className="text-center m-auto flex items-center justify-center
+                                        <button  className="text-center m-auto flex items-center justify-center
                                     font-bold  text-white leading-[19px] group hover:text-[#FFE600] transition-all"><i
                                                 className="fi flaticon-right-arrow transition-all mr-7 sm:mr-3"></i> Learn More</button>
                                     </div>
