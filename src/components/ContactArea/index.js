@@ -25,7 +25,7 @@ const ContactArea = (props) => {
                         <div className="basis-1/1 md:basis-full">
                             <div className="wpo-contact-info">
                                 <div className="info-item">
-                                    <h2>25 North Street,Dubai</h2>
+                                    <h2>Chittagong, Bangladesh</h2>
                                     <div className="info-wrap">
                                         <div className="info-icon">
                                             <i className="fi flaticon-location"></i>
@@ -36,7 +36,7 @@ const ContactArea = (props) => {
                                     </div>
                                 </div>
                                 <div className="info-item">
-                                    <h2>info@elito.com</h2>
+                                    <h2>mdtanvir7462@gmail.com</h2>
                                     <div className="info-wrap">
                                         <div className="info-icon">
                                             <i className="fi flaticon-mail"></i>
@@ -47,7 +47,7 @@ const ContactArea = (props) => {
                                     </div>
                                 </div>
                                 <div className="info-item">
-                                    <h2>+91 256-987-239</h2>
+                                    <h2>+880 1998863753 </h2>
                                     <div className="info-wrap">
                                         <div className="info-icon">
                                             <i className="fi flaticon-phone-call"></i>
